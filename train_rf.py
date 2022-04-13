@@ -26,8 +26,8 @@ from time import perf_counter
 from tqdm import tqdm
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-if1', '--gdelt', default='/afs/crc.nd.edu/user/s/skrieg/Private/psicorp/dat/2019-11-01/gdelt-features.csv')
-parser.add_argument('-if2', '--gtd', default='/afs/crc.nd.edu/user/s/skrieg/Private/psicorp/gtd/gtd_relevant_events.csv')
+parser.add_argument('-if1', '--gdelt', default='gdelt-features.csv')
+parser.add_argument('-if2', '--gtd', default='gtd_relevant_events.csv')
 # max delta to consider for observation windows
 parser.add_argument('-d', '--maxdelta', type=int, default=14)
 # number of workers to utilize in random forest training
