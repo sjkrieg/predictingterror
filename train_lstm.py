@@ -51,10 +51,10 @@ n_epochs = args.epochs
 num_folds = args.folds
 
 if args.debug:
-    inf_gdelt = '/afs/crc.nd.edu/user/s/skrieg/Private/psicorp/dat/2019-11-01/gdelt-sample.csv'
+    inf_gdelt = 'gdelt-sample.csv'
 else:
-    inf_gdelt = '/afs/crc.nd.edu/user/s/skrieg/Private/psicorp/dat/2019-11-01/gdelt-features.csv'
-inf_gtd = '/afs/crc.nd.edu/user/s/skrieg/Private/psicorp/gtd/gtd_relevant_events.csv'
+    inf_gdelt = 'gdelt-features.csv'
+inf_gtd = 'gtd_relevant_events.csv'
 out_dir = 'results/' + datetime.now().strftime('%Y%m%d') + '/'
 otf_name = 'lstm_d{:02d}_{}ce.csv'.format(args.delta, 'smo' if args.nobalance else 'bal')
 cols_to_drop = ['Date','Loc']
