@@ -35,8 +35,8 @@ from tqdm import tqdm
 parser = argparse.ArgumentParser()
 # number of observations to consider for feature feature; input layer will be size delta * nfeatures
 parser.add_argument('delta', type=int)
-parser.add_argument('-if1', '--gdelt', default='/afs/crc.nd.edu/user/s/skrieg/Private/psicorp/dat/2019-11-01/gdelt-features.csv')
-parser.add_argument('-if2', '--gtd', default='/afs/crc.nd.edu/user/s/skrieg/Private/psicorp/gtd/gtd_relevant_events.csv')
+parser.add_argument('-if1', '--gdelt', default='gdelt-features.csv')
+parser.add_argument('-if2', '--gtd', default='gtd_relevant_events.csv')
 # locations for testing
 parser.add_argument('-l', '--locs', nargs='+', type=lambda x: x.upper(), default=['NY','CA','TX','FL','WA'])
 # whether to test locations as a group
