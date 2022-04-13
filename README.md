@@ -6,7 +6,7 @@ To run the models described in the paper, you will need to do the following.
 2. Extract relevant events from GTD.
 3. Run the models.
 
-For step 1: run the following script:
+For step 1, run the following script:
   ```
   python get_gdelt_features.py STARTDATE ENDDATE NUMWORKERS
   ```
@@ -16,9 +16,9 @@ For step 1: run the following script:
   Key dependencies for this script include pandas (tested with 1.3.5).
   The ref/ directory (and the files in it) must also be accessible from the same directory as the script.
 
-For step 2: Extract the relevant events from the [Global Terrorism Database](https://www.start.umd.edu/gtd/). At minimum this must be a CSV file with the columns "country_txt", "provstate",  "iyear", "imonth", and "iday". See the label_features() function inside utils.py for details.
+For step 2, extract the relevant events from the [Global Terrorism Database](https://www.start.umd.edu/gtd/). At minimum this must be a CSV file with the columns "country_txt", "provstate",  "iyear", "imonth", and "iday". See the label_features() function inside utils.py for details.
 
-For step 3: Run one of the following scripts to train the appropriate model:
+For step 3, run one of the following scripts to train the appropriate model:
   ```
   python train_rf.py
   python train_ff1h.py
