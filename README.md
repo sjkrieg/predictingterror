@@ -2,7 +2,11 @@
 Public code for the paper "Predicting Terrorist Attacks in the United States using Localized News Data" by SJ Krieg et al.
 
 To run the models described in the paper, you will need to do the following.
-1. Extract features from GDELT. Run the following:
+1. Extract features from GDELT.
+2. Extract relevant events from GTD.
+3. Run the models.
+
+For step 1: run the following script:
   ```
   python get_gdelt_features.py STARTDATE ENDDATE NUMWORKERS
   ```
@@ -11,8 +15,10 @@ To run the models described in the paper, you will need to do the following.
   WARNING: these are large downloads and will use a lot of network bandwidth. The script cleans up temp files as it goes, so disk space should not be an issue.
   Key dependencies for this script include pandas (tested with 1.3.5).
   The ref/ directory (and the files in it) must also be accessible from the same directory as the script.
-2. Extract the relevant events from the [Global Terrorism Database](https://www.start.umd.edu/gtd/). At minimum this must be a CSV file with the columns "country_txt", "provstate",  "iyear", "imonth", and "iday". See the label_features() function inside utils.py for details.
-3. Run one of the following scripts to train the appropriate model:
+
+For step 2: Extract the relevant events from the [Global Terrorism Database](https://www.start.umd.edu/gtd/). At minimum this must be a CSV file with the columns "country_txt", "provstate",  "iyear", "imonth", and "iday". See the label_features() function inside utils.py for details.
+
+For step 3: Run one of the following scripts to train the appropriate model:
   ```
   python train_rf.py
   python train_ff1h.py
@@ -29,4 +35,4 @@ To run the models described in the paper, you will need to do the following.
   ```
   More arguments can be found within the source code.
   
-  Please e-mail skrieg@nd.edu with any questions. :-)
+Please e-mail skrieg@nd.edu with any questions. :-)
